@@ -5,11 +5,11 @@ x_k = sqrt(0.5) * randn(1,N);
 y_k = sqrt(0.5) * randn(1,N);
 
 % Correlation Model
-mu = sqrt(2)*sqrt(hypergeom(0.5, [1 1/3], -1*pi^2 * W^2) - besselj(1, 2*pi*W)/(2*pi*W));
+mu = sqrt(2)*sqrt(hypergeom(0.5, [1 3/2], -1*pi^2 * W^2) - besselj(1, 2*pi*W)/(2*pi*W));
 
 % Real and Imaginary parts
-real = sigma*sqrt(1-mu^2).*x_k + mu*x_k(1);
-imag = sigma*sqrt(1-mu^2).*y_k + mu*y_k(1);
+real = sigma*(sqrt(1-mu^2).*x_k + mu*x_k(1));
+imag = sigma*(sqrt(1-mu^2).*y_k + mu*y_k(1));
 
 % Module of g_k
 
