@@ -2,7 +2,7 @@ clear all
 clc
 close all
 
-N = 100;
+N = 50;
 W = 1;
 sigma = 1;
 
